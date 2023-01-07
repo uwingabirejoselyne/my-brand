@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <title>Admin</title>
+</head>
+<body>
+    <div class="all-container">
+        <div class="top">
+            <div class="under">
+              <nav class="container">
+                <h4>Joselyne U<span>.</span></h4>
+                <div class="nav-menu" id="navMenu">
+                  <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                  <li><a href="#about"><p> ABOUT ME</p></a></li>
+                  <li><a href="#service">SERVICES</a></li>
+                  <li><a href="login.html">BLOG</a></li>
+                  <li><a href="#contact">CONTACT ME</a></li>
+                </ul>
+              </div>
+              <i class="fa fa-bars" onclick="showMenu()"></i>
+              </nav>
+            </div>
+        </div>
+        <section>
+            <div class="add-post-container">
+                <div class="top-intro">
+                    <h1>Settings for @Admin</h1>
+                </div>
+                <div class="settings-container">
+                    <div class="user-sidebar">
+                        <ul>
+                            <li class="active"><a href="./index.html">Dashboard</a></li>
+                            <li><a href="./user-list.html">Users</a></li>
+                            <li><a href="./user-posts.html">Posts</a></li>
+                            <li><a href="./user-messages.html">Messages</a></li>
+                        </ul>
+                        <div class="toggle-profile-menu" onclick="toggleProfile(this)">
+                            <div class="bar1"></div>
+                            <div class="bar2"></div>
+                            <div class="bar3"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="post-contents-container user-posts">
+                            <div class="cards">
+                                <div>
+                                    <span id="total-posts"></span>
+                                    <span>Total Posts</span>
+                                </div>
+                                <div>
+                                    <span id="total-users"></span>
+                                    <span>Total Users</span></div>
+                                <div>
+                                    <span id="total-msgs"></span>
+                                    <span>Total Messages</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+           <footer>
+      <div class="upper-footer">
+          <div class="left-side">
+              <div>
+                  <h1>let's work together</h1>
+              </div>
+              <div>
+                  <p>Have a project you'd like to discuss</p>
+              </div>
+              <div><a href="./contact.html"><button>Let's connect</button></a></div>
+          </div>
+          <div class="right-side">
+              <ul class="social-links">
+                  <li><a href="https://facebook.com/ntarejules1" target="_blank"><img
+                              src="../assets/images/social-icons/fb.jpg" alt="facebook"></a> <span>cyzzjojoguint</span>
+                  </li>
+                  <li><a href="https://twitter.com/JulesNtare" target="_blank"><img
+                              src="../assets/images/social-icons/twitter.png" alt="twitter"></a>
+                      <span>@Joselyne Uwingabire</span></li>
+                  <li><a href="mailto:julesntare@gmail.com" target="_blank"><img
+                              src="../assets/images/social-icons/email.jpg" alt="email"></a>
+                      <span>uwingajoselyne@gmail.com</span>
+                  </li>
+                  <li><a href="https://www.instagram.com/j.ntare/" target="_blank"><img
+                              src="../assets/images/social-icons/instagram.jpg" alt="instagram"></a>
+                      <span>Joselyne Uwingabire</span></li>
+                  <li><a href="tel:+250785991851"><img src="../assets/images/social-icons/whatsapp.jpg"
+                              alt="phone"></a> <span>+250 785991851</span></li>
+              </ul>
+          </div>
+      </div>
+      <div class="lower-footer">&copy 2020 made by Joselyne Uwingabire. All rights reserved.</div>
+  </footer>
+          </div>
+    </div>
+</body>
+</html>
