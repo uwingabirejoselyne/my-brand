@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/form.css" />
     <link rel="stylesheet" href="../css/blog.css" />
-    <title>Admin</title>
+    <title>Document</title>
   </head>
   <body>
     <div class="all-container">
@@ -22,8 +21,9 @@
                   <a href="#about"><p>ABOUT ME</p></a>
                 </li>
                 <li><a href="#service">SERVICES</a></li>
-                <li><a href="login.html">BLOG</a></li>
+                <li><a href="#blog">BLOGS</a></li>
                 <li><a href="#contact">CONTACT ME</a></li>
+                <li><a href="./login.html">LOGIN</a></li>
               </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -33,51 +33,46 @@
       <section>
         <div class="add-post-container">
           <div class="top-intro">
-            <h1>Settings for @Admin</h1>
-          </div>
-          <div class="settings-container">
-            <div class="user-sidebar">
-              <ul>
-                <li><a href="./index.html">Dashboard</a></li>
-                <li class="active"><a href="./user-list.html">Users</a></li>
-                <li><a href="./user-posts.html">Posts</a></li>
-                <li><a href="./user-messages.html">Messages</a></li>
-              </ul>
-              <div class="toggle-profile-menu" onclick="toggleProfile(this)">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
-              </div>
+            <div>
+              <h2>New Post</h2>
+              <button id="close-page">Close</button>
             </div>
             <div>
-              <div class="post-contents-container user-posts">
-                <div class="posts-table">
-                  <div class="post-title">
-                    <h1>Users</h1>
-                    <a href="./add-user.html">Add New User</a>
-                  </div>
-                  <div class="post-data">
-                    <table>
-                      <tr>
-                        <th>Username</th>
-                        <th>Email</th>
-                        <th>Role</th>
-                        <th>Actions</th>
-                      </tr>
-                      <tr>
-                        <td>Joselyne</td>
-                        <td>uwingajoselyne@gmail.com</td>
-                        <td>Admin</td>
-                        <td>
-                          <a href="./edit-user.html">Edit</a>
-                          <a href="#">Delete</a>
-                        </td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
+              <div class="success-msg"></div>
+              <div class="error-msg"></div>
             </div>
+          </div>
+          <div class="post-contents-container">
+            <div>
+              <label for="file-upload" class="custom-file-upload">
+                Add Cover Image
+              </label>
+              <input
+                type="file"
+                name=""
+                accept="image/*"
+                capture="camera"
+                id="file-upload"
+              />
+              <span id="image-name"></span>
+            </div>
+            <input
+              type="text"
+              name=""
+              id="post-title"
+              placeholder="New Post title here..."
+            />
+            <textarea
+              name=""
+              id="post-contents"
+              cols="30"
+              rows="10"
+              placeholder="Write your post content here..."
+            ></textarea>
+          </div>
+          <div class="actions">
+            <button id="publish">Publish</button>
+            <button id="save-draft">save draft</button>
           </div>
         </div>
       </section>

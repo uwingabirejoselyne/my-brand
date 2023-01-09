@@ -1,55 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/blog.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/blog.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="all-container">
-        <div class="top">
-          <div class="under">
-            <nav class="container">
-              <h4>Joselyne U<span>.</span></h4>
-              <div class="nav-menu" id="navMenu">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
+      <div class="top">
+        <div class="under">
+          <nav class="container">
+            <h4>Joselyne U<span>.</span></h4>
+            <div class="nav-menu" id="navMenu">
+              <i class="fa fa-times" onclick="hideMenu()"></i>
               <ul>
-                <li><a href="#about"><p> ABOUT ME</p></a></li>
+                <li>
+                  <a href="#about"><p>ABOUT ME</p></a>
+                </li>
                 <li><a href="#service">SERVICES</a></li>
-                <li><a href="#blog">BLOGS</a></li>
                 <li><a href="#contact">CONTACT ME</a></li>
+                <li><a href="#blog">BLOG</a></li>
                 <li><a href="./login.html">LOGIN</a></li>
-                
               </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
-            </nav>
-            <section>
+          </nav>
+        </div>
+      </div>
+      <section>
         <div class="contact-overlay-bg blog-bg">
-            <div class="overlay-contents">
-                <div class="overlay-intro">
-                    <div>
-                        <h1>Blog</h1>
-                    </div>
-                    <div>
-                        <p>I try to publish some articles mainly about tech.
-                        </p>
-                    </div>
-                </div>
+          <div class="overlay-contents">
+            <div class="overlay-intro">
+              <div>
+                <h1>Blog</h1>
+              </div>
+              <div>
+                <p>I try to publish some articles mainly about tech.</p>
+              </div>
             </div>
+          </div>
         </div>
 
         <!-- my blog section -->
         <div class="sections services-container">
-            <div class="blog-container">
+          <div class="blog-container"></div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="upper-footer">
+          <div class="left-side">
+            <div>
+              <h1>let's work together</h1>
             </div>
-        </div>
-    </section>
+            <div>
+              <p>Have a project you'd like to discuss</p>
+            </div>
+            <div>
+              <a href="./contact.html"><button>Let's connect</button></a>
+            </div>
           </div>
-          
+          <div class="right-side">
+            <ul class="social-links">
+              <li>
+                <a href="https://facebook.com/cyzzjojoguint" target="_blank"
+                  ><img
+                    src="../assets/images/social-icons/fb.jpg"
+                    alt="facebook"
+                /></a>
+                <span>cyzzjojoguint</span>
+              </li>
+              <li>
+                <a href="https://twitter.com/josely_uwingabire" target="_blank"
+                  ><img
+                    src="../assets/images/social-icons/twitter.png"
+                    alt="twitter"
+                /></a>
+                <span>@Joselyne Uwingabire</span>
+              </li>
+              <li>
+                <a href="mailto:uwingajoselyne@gmail.com" target="_blank"
+                  ><img
+                    src="../assets/images/social-icons/email.jpg"
+                    alt="email"
+                /></a>
+                <span>uwingajoselyne@gmail.com</span>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/josely_uwingabire/"
+                  target="_blank"
+                  ><img
+                    src="../assets/images/social-icons/instagram.jpg"
+                    alt="instagram"
+                /></a>
+                <span>Joselyne Uwingabire</span>
+              </li>
+              <li>
+                <a href="tel:+250785991851"
+                  ><img
+                    src="../assets/images/social-icons/whatsapp.jpg"
+                    alt="phone"
+                /></a>
+                <span>+250 785991851</span>
+              </li>
+            </ul>
+          </div>
         </div>
-</body>
+        <div class="lower-footer">
+          &copy 2023 made by Joselyne Uwingabire. All rights reserved.
+        </div>
+      </footer>
+    </div>
+    <script src="../main.js"></script>
+    <script>
+      var navMenu = document.getElementById("navMenu");
+      function showMenu() {
+        navMenu.style.right = "0";
+      }
+      function hideMenu() {
+        navMenu.style.right = "-100%";
+      }
+    </script>
+  </body>
 </html>

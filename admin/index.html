@@ -22,8 +22,8 @@
                   <a href="#about"><p>ABOUT ME</p></a>
                 </li>
                 <li><a href="#service">SERVICES</a></li>
-                <li><a href="login.html">BLOG</a></li>
                 <li><a href="#contact">CONTACT ME</a></li>
+                <li><a href="login.html">BLOG</a></li>
               </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
@@ -38,8 +38,8 @@
           <div class="settings-container">
             <div class="user-sidebar">
               <ul>
-                <li><a href="./index.html">Dashboard</a></li>
-                <li class="active"><a href="./user-list.html">Users</a></li>
+                <li class="active"><a href="./index.html">Dashboard</a></li>
+                <li><a href="./user-list.html">Users</a></li>
                 <li><a href="./user-posts.html">Posts</a></li>
                 <li><a href="./user-messages.html">Messages</a></li>
               </ul>
@@ -51,29 +51,18 @@
             </div>
             <div>
               <div class="post-contents-container user-posts">
-                <div class="posts-table">
-                  <div class="post-title">
-                    <h1>Users</h1>
-                    <a href="./add-user.html">Add New User</a>
+                <div class="cards">
+                  <div>
+                    <span id="total-posts">0</span>
+                    <span>Posts</span>
                   </div>
-                  <div class="post-data">
-                    <table>
-                      <tr>
-                        <th>Username</th>
-                        <th>Email</th>
-                        <th>Role</th>
-                        <th>Actions</th>
-                      </tr>
-                      <tr>
-                        <td>Joselyne</td>
-                        <td>uwingajoselyne@gmail.com</td>
-                        <td>Admin</td>
-                        <td>
-                          <a href="./edit-user.html">Edit</a>
-                          <a href="#">Delete</a>
-                        </td>
-                      </tr>
-                    </table>
+                  <div>
+                    <span id="total-users">1</span>
+                    <span>Users</span>
+                  </div>
+                  <div>
+                    <span id="total-msgs">0</span>
+                    <span>Messages</span>
                   </div>
                 </div>
               </div>
