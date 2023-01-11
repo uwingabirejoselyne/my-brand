@@ -4,16 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/blog.css" />
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css"/>
+    <title>portifolio website</title>
   </head>
   <body>
     <div class="all-container">
       <div class="top">
         <div class="under">
           <nav class="container">
-            <h4><a href="../html/index.html">Joselyne Uwingabire <span>.</span></h4>
+            <h4><a href="index.html">Joselyne Uwingabire<span>.</span></a></h4>
             <div class="nav-menu" id="navMenu">
               <i class="fa fa-times" onclick="hideMenu()"></i>
               <ul>
@@ -28,51 +31,55 @@
             <i class="fa fa-bars" onclick="showMenu()"></i>
           </nav>
         </div>
-      </div>
-      <section>
-        <div class="add-post-container">
-          <div class="top-intro">
-            <div>
-              <h2>New Post</h2>
-              <button id="close-page">Close</button>
-            </div>
-            <div>
-              <div class="success-msg"></div>
-              <div class="error-msg"></div>
-            </div>
-          </div>
-          <div class="post-contents-container">
-            <div>
-              <label for="file-upload" class="custom-file-upload">
-                Add Cover Image
-              </label>
-              <input
-                type="file"
-                name=""
-                accept="image/*"
-                capture="camera"
-                id="file-upload"
-              />
-              <span id="image-name"></span>
-            </div>
-            <input
-              type="text"
-              name=""
-              id="post-title"
-              placeholder="New Post title here..."
-            />
-            <textarea
-              name=""
-              id="post-contents"
-              cols="30"
-              rows="10"
-              placeholder="Write your post content here..."
-            ></textarea>
-          </div>
-          <div class="actions">
-            <button id="publish">Publish</button>
-            <button id="save-draft">save draft</button>
-          </div>
+      <section class="service container" id="service">
+        <h1>Servi<span>ces</span></h1>
+        <h3>
+          Below are some of services I'm capable of providing according to my
+          skills:
+        </h3>
+        <div class="container service-container">
+          <article class="services">
+            <img src="../assets/images/social-icons/web-design-thumb.png" alt="">
+            <h2>Web Application Development</h2>
+            <p class="paragraph">
+              I create fast, beautiful, cost-effective and efficient websites
+              and web applications with perfect scores in Performance, SEO and
+              Best Practices. All web apps are built with the latest and
+              sophisticated technologies
+            </p>
+            <a href="service.html">Read More</a>
+          </article>
+          <article class="services">
+            <img src="../assets/images/social-icons/database.png" alt="">
+            <h2>Database Management</h2>
+            <p class="paragraph">
+              Keep the most important info about your employees organized in one place, learn in no time
+              how and when you can reach them, monitor time off and payments.
+            </p>
+            <a href="service.html">Read More</a>
+          </article>
+          <article class="services">
+            <img src="../assets/images/social-icons/ui.png" alt="">
+            <h2>User Interface Design</h2>
+            <p>
+              I have an eye for detail, passion for color theory & psychology,
+              enjoy playing with type and breaking the grid. I value simplicity
+              and clarity so I design easy to use and engaging interfaces for
+              desktop and mobile.
+            </p>
+            <a href="service.html">Read More</a>
+          </article>
+          <article class="services">
+            <img src="../assets/images/social-icons/repair.png" alt="">
+            <h2>Computer Repair</h2>
+            <p>
+              Our computer repair services include desktop and laptop computers
+              of all types and brands, particularly PC type computers. We can
+              also repair/replace your laptop screen or backlighting issue
+              depending upon your computer make and model
+            </p>
+            <a href="service.html">Read More</a>
+          </article>
         </div>
       </section>
       <footer>
@@ -115,9 +122,7 @@
                 <span>uwingajoselyne@gmail.com</span>
               </li>
               <li>
-                <a
-                  href="https://www.instagram.com/josely_uwingabire/"
-                  target="_blank"
+                <a href="https://www.instagram.com/josely_uwingabire/" target="_blank"
                   ><img
                     src="../assets/images/social-icons/instagram.jpg"
                     alt="instagram"
@@ -140,7 +145,7 @@
         </div>
       </footer>
     </div>
-    <script src="../main.js"></script>
+    <script src="../local-storage.js"></script>
     <script>
       var navMenu = document.getElementById("navMenu");
       function showMenu() {

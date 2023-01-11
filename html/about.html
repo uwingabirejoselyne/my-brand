@@ -4,16 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/blog.css" />
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css"/>
+    <title>portifolio website</title>
   </head>
   <body>
     <div class="all-container">
       <div class="top">
         <div class="under">
           <nav class="container">
-            <h4><a href="../html/index.html">Joselyne Uwingabire <span>.</span></h4>
+            <h4><a href="index.html">Joselyne Uwingabire<span>.</span></a></h4>
             <div class="nav-menu" id="navMenu">
               <i class="fa fa-times" onclick="hideMenu()"></i>
               <ul>
@@ -21,60 +24,36 @@
                   <a href="../html/about.html"><p>ABOUT ME</p></a>
                 </li>
                 <li><a href="../html/service.html">SERVICES</a></li>
-                <li><a href="../html/blog.html">BLOG</a></li>
                 <li><a href="../html/contact.html">CONTACT ME</a></li>
+                <li><a href="../html/blog.html">BLOG</a></li>
               </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
           </nav>
         </div>
+
+        
       </div>
-      <section>
-        <div class="add-post-container">
-          <div class="top-intro">
-            <div>
-              <h2>New Post</h2>
-              <button id="close-page">Close</button>
-            </div>
-            <div>
-              <div class="success-msg"></div>
-              <div class="error-msg"></div>
-            </div>
+      <section class="about" id="about">
+        <div class="container container-section">
+          <div class="left-side">
+            <img src="../images/IMG-20210201-WA0013.jpg" alt="" />
           </div>
-          <div class="post-contents-container">
+          <div class="right-section">
+            <h1>About <span>me</span></h1>
             <div>
-              <label for="file-upload" class="custom-file-upload">
-                Add Cover Image
-              </label>
-              <input
-                type="file"
-                name=""
-                accept="image/*"
-                capture="camera"
-                id="file-upload"
-              />
-              <span id="image-name"></span>
+              <p>
+                My name is Joselyne Uwingabire. I am a web designer and
+                developer based in Kigali, RWANDA. I'm currently a student at
+                University of RWANDA college of Science and Technology in
+                Computer Science. I'm passionate about computer software
+                development web-based application.
+              </p>
             </div>
-            <input
-              type="text"
-              name=""
-              id="post-title"
-              placeholder="New Post title here..."
-            />
-            <textarea
-              name=""
-              id="post-contents"
-              cols="30"
-              rows="10"
-              placeholder="Write your post content here..."
-            ></textarea>
-          </div>
-          <div class="actions">
-            <button id="publish">Publish</button>
-            <button id="save-draft">save draft</button>
           </div>
         </div>
       </section>
+      
       <footer>
         <div class="upper-footer">
           <div class="left-side">
@@ -115,9 +94,7 @@
                 <span>uwingajoselyne@gmail.com</span>
               </li>
               <li>
-                <a
-                  href="https://www.instagram.com/josely_uwingabire/"
-                  target="_blank"
+                <a href="https://www.instagram.com/josely_uwingabire/" target="_blank"
                   ><img
                     src="../assets/images/social-icons/instagram.jpg"
                     alt="instagram"
@@ -140,7 +117,7 @@
         </div>
       </footer>
     </div>
-    <script src="../main.js"></script>
+    <script src="../local-storage.js"></script>
     <script>
       var navMenu = document.getElementById("navMenu");
       function showMenu() {
