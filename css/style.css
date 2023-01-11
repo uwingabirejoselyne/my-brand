@@ -46,7 +46,6 @@ body {
   height: 2rem;
   padding-bottom: 6rem;
   background: var(--color-black);
-  /* position: fixed; */
   z-index: 999;
 }
 nav {
@@ -64,11 +63,12 @@ nav {
     background: var(--color-bg);
     box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
 }*/
-nav h4 {
+nav h4 a{
   color: white;
   letter-spacing: 0.2rem;
   font-size: 1.5rem;
-  padding-right: 1rem;
+  text-decoration: none;
+  opacity: 0.7;
 }
 nav span {
   color: var(--color-yelow);
@@ -661,6 +661,7 @@ nav .fa {
     width: 100%;
     margin: 0 auto;
   }
+ 
   nav {
     height: 6rem;
     display: flex;

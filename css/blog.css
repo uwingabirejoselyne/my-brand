@@ -722,7 +722,7 @@ section .project-bg {
   align-items: center;
   margin: 0 auto;
   width: 55%;
-  min-height: 298px;
+  min-height: 100px;
   text-align: center;
   background: url("../assets/images/overlay-bg.svg") center;
 }
@@ -1233,43 +1233,39 @@ font-size: 18px;
 
 /* media queries */
 @media (max-width: 768px) {
-  header .at-bottom {
-    width: 100%;
-    position: relative;
-  }
-  .toggle-menu {
-    position: absolute;
-    display: inline-block;
-    top: 10;
-    right: 5%;
-  }
   nav {
-    width: 100%;
-  }
-  nav ul {
-    display: none;
-    align-items: center;
-  }
-  nav ul.change {
-    position: absolute;
+    height: 6rem;
     display: flex;
-    flex-direction: column;
-    top: 0;
-    right: 0%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    padding: 4% 2%;
+    margin-bottom: 2rem;
+  }
+  .nav-menu ul li {
+    display: block;
+    margin: 25px;
+  }
+  .nav-menu {
+    position: absolute;
+    background: #181818;
+    height: 100vh;
     width: 100%;
-    background: #0e172d;
-    height: 90vh;
-    padding: 1.25em;
-    margin: 0;
-    margin-top: 80px;
-    z-index: 999;
+    top: 0;
+    z-index: 2;
+  }
+  nav .fa {
+    padding-top: 20px;
+    padding-right: 10px;
+    display: block;
+    color: #fff;
+    cursor: pointer;
+  }
+  .nav-menu ul {
+    padding: 30px;
   }
 
-  nav ul li {
-    flex-basis: 2em;
-    font-size: 1.5em;
-    color: #fff;
-  }
+
   section .overlay,
   section .contact-overlay-bg,
   section .about-bg,

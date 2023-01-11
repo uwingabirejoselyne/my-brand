@@ -17,15 +17,14 @@
     <div class="top">
         <div class="under">
           <nav class="container">
-            <h4>Joselyne U<span>.</span></h4>
+            <h4><a href="../html/index.html">Joselyne uwingabire <span>.</span></a></h4>
             <div class="nav-menu" id="navMenu">
               <i class="fa fa-times" onclick="hideMenu()"></i>
             <ul>
               <li><a href="#index"><p> ABOUT ME</p></a></li>
               <li><a href="#service">SERVICES</a></li>
-              <li><a href="#skill1">SKILLS</a></li>
               <li><a href="./signup.html" id="login-fom">SIGNUP</a></li>
-              <li><a href="#about">BLOGS</a></li>
+              <li><a href="#about">BLOG</a></li>
               <li><a href="#contact">CONTACT ME</a></li>
             </ul>
           </div>
@@ -97,5 +96,15 @@
         </div>
         </div>
     </div>
+    <script src="../main.js"></script>
+    <script>
+      var navMenu = document.getElementById("navMenu");
+      function showMenu() {
+        navMenu.style.right = "0";
+      }
+      function hideMenu() {
+        navMenu.style.right = "-100%";
+      }
+    </script>
 </body>
 </html>
