@@ -40,6 +40,7 @@ body {
 .top {
     width: 100%;
     height: 100%;
+    padding-bottom: 4rem;
 }
 .under {
   width: 100%;
@@ -47,6 +48,7 @@ body {
   padding-bottom: 6rem;
   background: var(--color-black);
   z-index: 999;
+  position: fixed;
 }
 nav {
   height: 6rem;
@@ -69,11 +71,13 @@ nav h4 a{
   font-size: 1.5rem;
   text-decoration: none;
   opacity: 0.7;
+
 }
 nav span {
   color: var(--color-yelow);
   font-size: 40px;
 }
+
 .nav-menu {
   flex: 1;
   text-align: right;
@@ -84,9 +88,7 @@ nav span {
   padding: 8px 12px;
   position: relative;
 }
-.nav-menu p {
-  color: var(--color-yelow);
-}
+
 /* .nav-menu ul li::after {
   content: "";
   width: 0%;
@@ -106,18 +108,12 @@ nav span {
   text-transform: capitalize;
 }
 .nav-menu li a:hover {
-  color: #6b6b6b;
+  color: var(--color-yelow);
 }
-.btn {
-  background: #f9004d;
-  padding: 1rem 4rem;
-  border-radius: 1.5rem;
-  color: white;
-  text-decoration: none;
-  font-size: 1.5rem;
-  border: 1px solid transparent;
-  cursor: pointer;
+.nav-menu li a span:hover {
+  color: #fff;
 }
+
 header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -734,7 +730,6 @@ nav .fa {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
-    padding-top: 2rem;
     margin-bottom: 1rem;
   }
   .right-section h1 {

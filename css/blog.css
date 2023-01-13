@@ -664,6 +664,7 @@ section {
   min-height: 100%;
   background: #928e8e;
   padding-bottom: 10px;
+  padding-top: 5rem;
   
 }
 section .overlay {
@@ -840,8 +841,9 @@ button:hover {
   width: 90%;
   min-height: 100%;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 100px;
   margin-bottom: 100px;
+  padding-top: 1rem;
 }
 .sections h2,
 .sections hr {
@@ -1217,7 +1219,7 @@ footer {
 }
 .content .card{
   height: 500px;
-  padding-bottom: 100px;
+  padding-bottom: 300px;
   flex: 1;
   margin: 50px 20px;
   background: rgba(68, 68, 68, 0.14);
@@ -1233,13 +1235,34 @@ font-size: 18px;
   margin-left: 50px;
   font-size: 15px;
   }
+  .content .card a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0b091f;
+    margin: 0px 180px;
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+  }
 .card img{
   width: 100%;
   height: 300px;
   margin-top: 30px;
 }
-
-.author-post-details{}
+.feedback{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  padding-right: 2px;
+  margin-top: 10px;
+}
+.feedback span{
+  color: rgb(7, 3, 23);
+  padding-right: 15px;
+  opacity: 0.4;
+}
 
 /* media queries */
 @media (max-width: 768px) {
