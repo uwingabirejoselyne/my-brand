@@ -166,21 +166,24 @@
           </div>
           <div class="contactForm">
             <h2>Send message</h2>
+            <form id="myForm">
             <div class="inputBox">
-              <input type="text" id="name"/>
-              <span>Full Name</span>
+              <label for="">Full Name</label>
+              <input type="text" id="name"/> <br>
+         
             </div>
             <div class="inputBox">
+              <label for="">Email</label>
               <input type="text" id="email"/>
-              <span>Email</span>
             </div>
             <div class="inputBox">
+              <label for="">Type a message</label>
               <textarea name="" id="message"></textarea>
-              <span>Type your message</span>
             </div>
             <div class="inputBox">
-              <input type="submit" value="send" onclick="saveData()"/>
+              <input type="submit" value="submit" />
             </div>
+          </form>
           </div>
         </div>
       </section>
@@ -247,7 +250,7 @@
         </div>
       </footer>
     </div>
-    <script src="../local-storage.js"></script>
+    <script src="../js/contact.js"></script>
     <script>
       var navMenu = document.getElementById("navMenu");
       function showMenu() {
