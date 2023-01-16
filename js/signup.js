@@ -1,21 +1,31 @@
-function saveSignupData(){
-    const firstName = document.getElementById('firstName').value;
-    const lastName = document.getElementById('lastName').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const cpassword = document.getElementById('cpassword').value;
-    let signupData =[];
-    if(localStorage.getItem('signupData')){
-        saveSignupData = JSON.parse(localStorage.getItem('signupData'));
-    }
-    signupData.push({firstName:firstName,lastName:lastName,email:email, password: password, cpassword: cpassword})
-    const signupDataString = JSON.stringify(signupData);
 
-    localStorage.setItem("signupData", signupDataString);
-    alert("Signup data saved successfully!");
-    
-}
-function resetSignupData(){
-    localStorage.removeItem("signupData");
-    alert("Signup data reset successfully!");
-}
+const signupForm = document.getElementById('signUpForm');
+const storageKey ='signupData';
+let signupData = JSON.parse(localStorage.getItem(storageKey)) || [];
+signupForm.addEventListener('submit',(event)=>{
+    event.preventDefault();
+    const formValues ={
+        firstName:signupForm.firstName.value,
+        lastName:signupForm.lastName.value,
+        email:signupForm.email.value,
+        password:signupForm.password.value,
+        cpassword:signupForm.cpassword.value,
+
+    };
+    if(formValues.firstName && formValues.lastName && formValues.email && formValues.password && formValues.cpassword){
+        signupData.push(formValues);
+        if (signupData.length > 0) {
+          localStorage.setItem(storageKey, JSON.stringify(signupData));
+          console.log("Form data saved to local storage.")
+        } else {
+          console.log("Cannot store an empty form data in local storage.");
+        }
+    }else {
+        console.log("Please fill all fields")
+    }
+      signupForm.firstName.value=""
+      signupForm.lastName.value=""
+        signupForm.email.value=""
+        signupForm.password.value=""
+        signupForm.cpassword.value=""
+})

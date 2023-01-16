@@ -1,52 +1,27 @@
 
-
-  /*// Get the form element
-const form = document.getElementById('myForm');
-
-// Get the local storage key
-const storageKey = 'formData';
-
-// Get the existing data from local storage, if any
+const form = document.getElementById("myForm");
+const storageKey = "FormData";
 let formData = JSON.parse(localStorage.getItem(storageKey)) || [];
-
-// Add event listener to the form submit event
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  // Get the form input values
-  const formValues = {
-    name: form.name.value,
-    email: form.email.value,
-    message: form.message.value
-  };
-
-  // Add the form values to the formData array
-  formData.push(formValues);
-
-  // Save the formData array to local storage
-  localStorage.setItem(storageKey, JSON.stringify(formData));
-
-  // Clear the form inputs
-  form.name.value = '';
-  form.email.value = '';
-  form.message.value = '';
-});
-*/
-const form =document.getElementById('myForm');
-const storageKey ='FormData'
-let formData =JSON.parse(localStorage.getItem(storageKey)) || [];
-form.addEventListener('submit',(event)=>{
+form.addEventListener("submit", (event) => {
     event.preventDefault();
     const formValues = {
-        name:form.name.value,
-        email:form.email.value,
-        message:form.message.value
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value
+    };
+    if(formValues.name && formValues.email && formValues.message){
+        formData.push(formValues);
+        if (formData.length > 0) {
+          localStorage.setItem(storageKey, JSON.stringify(formData));
+          console.log("Form data saved to local storage.")
+        } else {
+          console.log("Cannot store an empty form data in local storage.");
+        }
+    }else {
+        console.log("Please fill all fields")
     }
-    formData.push(formValues);
-    localStorage.setItem(storageKey, JSON.stringify(formData));
-    form.name.value ='';
-    form.email.value ='';
-    form.message.value ='';
-})
-
+    form.name.value = "";
+    form.email.value = "";
+    form.message.value = "";
+});
 
