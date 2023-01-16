@@ -124,7 +124,7 @@ body{
     left: 0;
     width: 200%;
     height: 100%;
-    background: var(--gradient-color);
+    background: #fea609;
     background-size: 50% 100%;
     z-index: 5;
 }
@@ -148,6 +148,9 @@ body{
     gap: var(--gap);
     padding-block: 2rem;
     border-bottom: 1px solid var(--transparent-light-color);
+}
+.trending-news-data h3{
+    padding-bottom: 10px;
 }
 
 .trending-news-box:last-of-type{
