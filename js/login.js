@@ -1,12 +1,14 @@
-function saveLoginData(){
+function saveLoginData() {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    if(!localStorage.getItem(email)){
-        localStorage.setItem(email,password);
-        console.log("Email and Password is saved in localstorage");
+    if (email && password) {
+        if (localStorage.getItem(email)) {
+            window.location.href = '../admin/new-post.html';
+        }
+        else {
+            console.log("Email and password is not available in localStorage");
+        }
     }
-    else{
-        console.log("Email and password exist in local storage");
-    }
+
 }
 
