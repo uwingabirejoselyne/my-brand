@@ -9,6 +9,9 @@ form.addEventListener("submit", (event) => {
         email: form.email.value,
         message: form.message.value
     };
+    if(name ==""){
+      alert("Please enter your name")
+    }
     if(formValues.name && formValues.email && formValues.message){
         formData.push(formValues);
         if (formData.length > 0) {
