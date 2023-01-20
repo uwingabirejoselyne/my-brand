@@ -108,7 +108,7 @@ for (let i = 0; i < posts.length; i++) {
 
   // Create table data element for actions
   const tdActions = document.createElement("td");
-  tdActions.innerHTML = '<a href="./edit-post.html">Edit</a> <a href="#">Delete</a>';
+  tdActions.innerHTML = `<a href='edit-post.html?id=${i}'>Edit</a> <a href=edit-post.html'?id=${i}'>Delete</a>`;
   tr.appendChild(tdActions);
 
   // Append the table row element to the table body

@@ -278,6 +278,7 @@
 .add-post-container > div {
   width: 60%;
   margin: 0 auto;
+  margin-top: 4rem;
 }
 .top-intro {
   justify-content: space-between;
