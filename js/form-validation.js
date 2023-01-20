@@ -1,4 +1,4 @@
-let myform = document.getElementById('myForm');
+/*let myform = document.getElementById('myForm');
 myform.addEventListener("submit",function(event){
     event.preventDefault();
     let name = document.getElementById('name').value;
@@ -10,4 +10,4 @@ myform.addEventListener("submit",function(event){
     else{
         alert("form submitted successfully");
     }
-})
+})*/

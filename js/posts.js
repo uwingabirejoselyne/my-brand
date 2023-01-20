@@ -12,6 +12,7 @@ while (postsContainer.firstChild) {
 // Iterate through the array of posts
 for (let i = 0; i < posts.length; i++) {
   const post = posts[i];
+
   // Create a new div element for each post
   const postDiv = document.createElement("div");
   postDiv.classList.add("card");
@@ -49,6 +50,7 @@ for (let i = 0; i < posts.length; i++) {
   cardBottomRightSide.classList.add("card-bottom-right-side");
   cardBottomRightSide.innerHTML = '<div><i class="fa fa-heart-o"></i><span>Like</span></div><div><i class="fa fa-comment-o"></i><span>Comment</span></div>';
   cardBottomSide.appendChild(cardBottomRightSide);
+  
 
   // Append the post div to the container
   postsContainer.appendChild(postDiv);

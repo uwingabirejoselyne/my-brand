@@ -60,17 +60,20 @@
                     <h1>Posts</h1>
                     <a href="./new-post.html">Add New Post</a>
                   </div>
-                  <div class="post-data">
+                  <div class="post-data" id="post-data">
                     <!-- table with data: no, post title, post description, firebase post image url, actions -->
-                    <table>
-                      <tr>
+                    <table id="existing-table">
+                      <thead>
+                      <tr >
                         <th>No</th>
                         <th>Post Title</th>
                         <th>Post Description</th>
                         <th>Post Image</th>
                         <th>Actions</th>
                       </tr>
-                      <tr>
+                    </thead>
+                    <tbody >
+                      <tr > 
                         <td>1</td>
                         <td>Post Title</td>
                         <td>Post Description</td>
@@ -130,6 +133,7 @@
                           <a href="#">Delete</a>
                         </td>
                       </tr>
+                    </tbody>
                     </table>
                   </div>
                 </div>
@@ -213,5 +217,6 @@
         navMenu.style.right = "-100%";
       }
     </script>
+    <script src="../js/user-posts.js"></script>
   </body>
 </html>

@@ -165,20 +165,21 @@
             </div>
           </div>
           <div class="contactForm">
+          <span id="error-message" style="margin-bottom: 20px;"></span>
             <h2>Send message</h2>
             <form id="myForm">
             <div class="inputBox">
               <label for="">Full Name</label>
-              <input type="text" id="name"  required/> <br>
+              <input type="text" id="name" name="name" required/> <br>
          
             </div>
             <div class="inputBox">
               <label for="">Email</label>
-              <input type="text" id="email" required/>
+              <input type="text" id="email" name="email" required/>
             </div>
             <div class="inputBox">
               <label for="">Type a message</label>
-              <textarea name="" id="message" required></textarea>
+              <textarea name="" id="message" name="message" required></textarea>
             </div>
             <div class="inputBox">
               <input type="submit" value="submit" />
@@ -250,7 +251,7 @@
         </div>
       </footer>
     </div>
-    <script src="../js/form-validation.js"></script>
+    <script src="../js/"></script>
     <script src="../js/contact.js"></script>
     <script>
       var navMenu = document.getElementById("navMenu");

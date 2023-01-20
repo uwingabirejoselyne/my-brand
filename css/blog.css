@@ -896,6 +896,13 @@ button:hover {
   width: 150px;
   margin: 10px 0;
 }
+.small-image {
+  width: 50px;
+}
+
+#post-table th,td{
+  padding: 10px 0 10px 30px;
+}
 .project-details div {
   flex: 2;
 }

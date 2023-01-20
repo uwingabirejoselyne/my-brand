@@ -76,18 +76,18 @@
             <form action="" id="myForm">
             <div class="inputBox">
               <label for="">Full Name</label>
-              <input type="text" id="name"/>
+              <input type="text" id="name" required/>
             </div>
             <div class="inputBox">
               <label for="">Email</label>
-              <input type="text" id="email"/>
+              <input type="text" id="email" required/>
             </div>
             <div class="inputBox">
               <label for="">Type a Message</label>
-              <textarea name="" id="message"></textarea>
+              <textarea name="" id="message" required></textarea>
             </div>
             <div class="inputBox">
-              <input type="submit" value="send" />
+              <input type="submit" value="send" required />
             </div>
           </form>
           </div>
@@ -156,7 +156,7 @@
         </div>
       </footer>
     </div>
-    <script src="../local-storage.js"></script>
+    <script src="../js/contact.js"></script>
     <script>
       var navMenu = document.getElementById("navMenu");
       function showMenu() {
