@@ -540,6 +540,40 @@ header span {
   color: #fff;
   border: none;
 }
+.form-control{
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.form-control i{
+  position: absolute;
+  visibility: hidden;
+  top: 20px;
+  right: 10px;
+}
+.form-control.success i.fa.fa-check-circle-o{
+  visibility: visible;
+  color: #2ecc71;
+}
+.form-control.error i.fa.fa-exclamation-circle{
+  visibility: visible;
+  color: #e74c3c;
+}
+.form-control small{
+  display: absolute;
+  visibility: hidden;
+  left: 0;
+  top:0;
+}
+.form-control input{
+  border: none;
+}
+.form-control.error small{
+  visibility: hidden;
+  color: #e74c3c;
+}
+
+
 .social-links {
   display: flex;
   flex-wrap: wrap;
@@ -552,7 +586,76 @@ header span {
   height: 30px;
   border-radius: 50%;
 }
+.comments-section {
+  width: 100%;
+  margin: 0 auto;
+}
 
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.comment {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.user-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.comment-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2px;
+}
+
+.like-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.like-count {
+  margin-left: 10px;
+}
+
+form {
+  margin-top: 20px;
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 footer {
   width: 100%;
   display: flex;

@@ -15,7 +15,9 @@ for (let i = 0; i < posts.length; i++) {
 
   // Create a new div element for each post
   const postDiv = document.createElement("div");
+  postDiv.style.width = "300px";
   postDiv.classList.add("card");
+
 
   // Create image element if it exist
   if(post.image) {
@@ -31,7 +33,9 @@ for (let i = 0; i < posts.length; i++) {
 
   // Create a contents element
   const contents = document.createElement("p");
+  contents.style.width = "10px";
   contents.innerHTML = post.contents;
+  
   postDiv.appendChild(contents);
 
   // Create the bottom side of the card
@@ -42,7 +46,7 @@ for (let i = 0; i < posts.length; i++) {
   // Create the bottom left side of the card
   const cardBottomLeftSide = document.createElement("div");
   cardBottomLeftSide.classList.add("card-bottom-left-side");
-  cardBottomLeftSide.innerHTML = '<a href="../blog-section/index.html"> Continue</a>';
+  cardBottomLeftSide.innerHTML = `<a href="../blog-section/index.html?id=${i}"> Continue</a>`;
   cardBottomSide.appendChild(cardBottomLeftSide);
 
   // Create the bottom right side of the card

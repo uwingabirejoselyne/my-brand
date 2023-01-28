@@ -1,5 +1,3 @@
-
-
 const signupForm = document.getElementById('signUpForm');
 const storageKey ='signupData';
 let signupData = JSON.parse(localStorage.getItem(storageKey)) || [];
