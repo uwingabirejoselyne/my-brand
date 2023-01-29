@@ -15,7 +15,6 @@ for (let i = 0; i < posts.length; i++) {
 
   // Create a new div element for each post
   const postDiv = document.createElement("div");
-  postDiv.style.width = "300px";
   postDiv.classList.add("card");
 
 
@@ -33,9 +32,8 @@ for (let i = 0; i < posts.length; i++) {
 
   // Create a contents element
   const contents = document.createElement("p");
-  contents.style.width = "10px";
+
   contents.innerHTML = post.contents;
-  
   postDiv.appendChild(contents);
 
   // Create the bottom side of the card

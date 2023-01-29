@@ -461,10 +461,7 @@
 .settings-container .post-contents-container .cards {
   flex-direction: row;
 }
-.card {
-  width: 300px;
-  height: 400px;
-}
+
 .cards > div {
   background: #fff;
   font-size: 24px;
@@ -1230,9 +1227,13 @@ footer {
   align-items: center;
   margin: 0 auto;
 }
+.card {
+  width: 300px;
+  min-height: 400px;
+}
 .content .card{
-  height: 500px;
-  padding-bottom: 600px;
+  width: 100%;
+  min-height: 500px;
   flex: 1;
   margin: 50px 20px;
   background: rgba(68, 68, 68, 0.14);
@@ -1244,11 +1245,10 @@ margin-left: 50px;
 font-size: 18px;
 }
 .content .card p{
-  width: 10px;
-  margin-right: 1000px;
-  margin-top: 10px;
-  margin-left: 50px;
+  width: 100%;
+  padding: 20px;
   font-size: 15px;
+  word-break: break-word;
   }
   
 .card img{

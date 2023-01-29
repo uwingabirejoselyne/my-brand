@@ -9,6 +9,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/comment.css">
     <link rel="stylesheet" href="../blog-section/assets/css/main.css">
     <title>Blog Section</title>
 </head>
@@ -49,19 +50,54 @@
                     <div class="party-of-readmore">
                       <h2 id="read-title">hhhhhhhhhhh</h2>
                       <p id="read-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae perspiciatis aperiam unde temporibus alias laborum nobis molestias suscipit nemo? Quisquam numquam maiores minima culpa hic aperiam porro dolor ad id. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis aspernatur eveniet, deserunt dicta soluta labore, consequuntur dolor sapiente quam sunt illo quibusdam impedit. Cum laboriosam labore veniam porro dicta hic!</p>
-                    </div>
-                    <div class="commentss-section">
-                      <div class="comment">
-                        <div class="comment-actions">
-                          <button class="like-button">Like</button>
-                          <span class="like-count">0</span>
+                      <div class="container center__display">
+                        <div class="top">
+                            <div class="video__container">
+                               
+                                <form>
+                                    <div class="heart__icon center__display">
+                                        <i class="fa fa-heart-o"></i>
+                                    </div>
+                                    <div class="form__info center__display">
+                                        <input type="text" name="user" id="user" placeholder="Your user name">
+                                        <input type="text" name="comment" id="comment" placeholder="Add a short comment here">
+                                    </div>
+                                    <button type="submit" class="submit__btn">
+                                        Submit
+                                    </button>
+                                </form>
+                                <div class="likes__count">
+                                    <i class="fa fa-heart-o"></i>
+                                    <small class="count">0</small>
+                                </div>
+                            </div>
                         </div>
-                        <form>
-                          <textarea placeholder="Add a comment"></textarea>
-                          <button type="submit">Post Comment</button>
-                        </form>
+                
+                        <div class="comments__container center__display">
+                             <div class="comment__card">
+                                <div class="pic center__display">
+                                    A
+                                </div>
+                                <div class="comment__info">
+                                    <small class="nickname">
+                                        UserNameHere
+                                    </small>
+                                    <p class="comment">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, in magnam! Libero?
+                                    </p>
+                                    <div class="comment__bottom">
+                                        <div class="heart__icon--comment">
+                                            <i class="far fa-heart"></i>
+                                        </div>
+                                        <button>
+                                            Reply
+                                        </button>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
                     </div>
-                </div>
+                    </div>
                 </div>
                 <div class="blog-section-right-side">
                     <h2>Trending Technologies</h2>
@@ -183,6 +219,7 @@
         </div>
       </footer>
      </div>
+     <script src="../js/comment.js"></script>
      <script src="../js/readmore.js"></script>
      <script>
        var navMenu = document.getElementById("navMenu");

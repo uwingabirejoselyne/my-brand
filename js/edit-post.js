@@ -14,7 +14,7 @@ const imageName = document.getElementById("image-name");
 
 // Get post data from local storage
 const posts = JSON.parse(localStorage.getItem("posts"));
-const post = posts.find((p, i) => i == postId);
+const post = posts.find(p =>p.id == postId);
 
 // Set post data to form fields
 postTitle.value = post.title;
@@ -50,7 +50,8 @@ updateBtn.addEventListener("click", function() {
 // Delete post
 deleteBtn.addEventListener("click", function() {
   if(confirm("Are you sure you want to delete this post?")) {
-    const index = posts.findIndex((p, i) => i == postId);
+    const index = posts.findIndex(p=>p.id == postId);
+    console.log(index)
     posts.splice(index, 1);
     // delete the post in local storage or via an API call
     localStorage.setItem("posts", JSON.stringify(posts));
