@@ -41,17 +41,17 @@ for (let i = 0; i < posts.length; i++) {
   cardBottomSide.classList.add("card-bottom-side");
   postDiv.appendChild(cardBottomSide);
 
-  // Create the bottom left side of the card
-  const cardBottomLeftSide = document.createElement("div");
-  cardBottomLeftSide.classList.add("card-bottom-left-side");
-  cardBottomLeftSide.innerHTML = `<a href="../blog-section/index.html?id=${i}"> Continue</a>`;
-  cardBottomSide.appendChild(cardBottomLeftSide);
-
   // Create the bottom right side of the card
   const cardBottomRightSide = document.createElement("div");
   cardBottomRightSide.classList.add("card-bottom-right-side");
   cardBottomRightSide.innerHTML = '<div><i class="fa fa-heart-o"></i><span>Like</span></div><div><i class="fa fa-comment-o"></i><span>Comment</span></div>';
   cardBottomSide.appendChild(cardBottomRightSide);
+
+  // Create the bottom left side of the card
+  const cardBottomLeftSide = document.createElement("div");
+  cardBottomLeftSide.classList.add("card-bottom-left-side");
+  cardBottomLeftSide.innerHTML = `<a href="../blog-section/index.html?id=${i}"> Continue</a>`;
+  cardBottomSide.appendChild(cardBottomLeftSide);
   
 
   // Append the post div to the container
