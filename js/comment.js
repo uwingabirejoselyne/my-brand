@@ -1,175 +1,123 @@
-const submitBtn = document.querySelector('.submit__btn')
-const userName = document.querySelector('#user')
-const comment = document.querySelector('#comment')
-const likeIcon = document.querySelector('.heart__icon')
-const count = document.querySelector('.count')
-const commentsCont = document.querySelector('.comments__container')
+/*let comments = [];
 
-likeIcon.addEventListener('click', likeVideo)
-submitBtn.addEventListener('click', submitFeedback)
+document.querySelector("form").addEventListener("submit", function (event) {
+  event.preventDefault();
 
+  let user = document.querySelector("#user").value;
+  let comment = document.querySelector("#comment").value;
 
-feedbackArr = []
-let positiveFeedback = false
-let likesCount = 0
+  let newComment = {
+    username: user.charAt(0),
+    text: comment,
+  };
 
-function submitFeedback(e){
-    // get user name
-    const userForm = userName.value 
-    // get feedback
-    const commentForm = comment.value 
-    // if inputs are not empty
-    if(userForm && commentForm !== ''){
-        // create new feedback
-        newFeedback = {
-            "id": Math.floor((Math.random() * 1000)+ 1),
-            "userName": userForm,
-            "userComment": commentForm,
-            "typeOfFeedback": positiveFeedback
-        }
-        // add new feedback to array
-        feedbackArr.push(newFeedback)
-        // if liked add to count
-        if(positiveFeedback === true){
-            addLikes()
-        }
-        // clear inputs 
-        resetForm()
-        // add feedback to list
-        addFeedback(newFeedback)
-    }
+  comments.push(newComment);
 
-
-    e.preventDefault()
-}
-
-function likeVideo(){
-    likeIcon.classList.toggle('liked')
-
-    if(likeIcon.classList.contains('liked')){
-        likeIcon.innerHTML = `<i class="fa fa-hear-t-o"></i>`
-        // set feedback to liked
-        positiveFeedback = true
-    } else {
-        likeIcon.innerHTML = `<i class="fa fa-heart-o"></i>`
-        // set feedback to not liked
-        positiveFeedback = false
-    }
-}
-
-function addLikes(){
-    likesCount++
-    count.innerHTML = likesCount
-}
-
-function resetForm(){
-    userName.value = ''
-    comment.value = ''
-    likeIcon.innerHTML = `<i class="fa fa-heart-o"></i>`
-    positiveFeedback = false
-}
-
-function addFeedback(item){
-    // select first letter of the user name
-    const letter = (item.userName).charAt(0)
-    // create new div
-    const div = document.createElement('div')
-    // add class
-    div.classList = 'comment__card'
-    // add id
-    div.id = item.id 
-    // add html
-    div.innerHTML = `
-    <div class="pic center__display">
-                    ${letter}
-                </div>
-                <div class="comment__info">
-                    <small class="nickname">
-                        ${item.userName}
-                    </small>
-                    <p class="comment">
-                        ${item.userComment}
-                    </p>
-                    <div class="comment__bottom">
-                        <div class="heart__icon--comment">
-                            ${item.typeOfFeedback ? `<i class="fa fa-heart-o positive"></i>` : `<i class="far fa-heart"></i>`}
-                        </div>
-                        <button>
-                            Reply
-                        </button>
-                    </div>
-                </div>
-    `
-    // insert feedback into the list
-    commentsCont.insertAdjacentElement('beforeend', div)
-}
-/*
-document.querySelector('form').addEventListener('submit', submitComment);
-
-function submitComment(event) {
-    event.preventDefault();
-    var user = document.querySelector('#user').value;
-    var comment = document.querySelector('#comment').value;
-
-    // Create new comment element
-    var commentCard = document.createElement('div');
-    commentCard.classList.add('comment__card');
-    commentCard.innerHTML = `
-        <div class="pic center__display">A</div>
-        <div class="comment__info">
-            <small class="nickname">${user}</small>
-            <p class="comment">${comment}</p>
-            <div class="comment__bottom">
-                <div class="heart__icon--comment">
-                    <i class="far fa-heart"></i>
-                </div>
-                <button>Reply</button>
-            </div>
-        </div>
-    `;
-
-    // Append new comment to comments container
-    var commentsContainer = document.querySelector('.comments__container');
-    commentsContainer.appendChild(commentCard);
-
-    // Clear input fields
-    document.querySelector('#user').value = '';
-    document.querySelector('#comment').value = '';
-}*/
-const form = document.querySelector("form");
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const userName = document.getElementById("user").value;
-    const comment = document.getElementById("comment").value;
-
-    if (!userName || !comment) {
-        alert("Please fill out both the username and comment fields");
-        return;
-    }
-    
-    const commentsContainer = document.querySelector(".comments__container");
-    const commentCard = document.createElement("div");
-    commentCard.classList.add("comment__card");
-    commentCard.innerHTML = `
-        <div class="pic center__display">
-            A
-        </div>
-        <div class="comment__info">
-            <small class="nickname">
-                ${userName}
-            </small>
-            <p class="comment">
-                ${comment}
-            </p>
-            <div class="comment__bottom">
-                <div class="heart__icon--comment">
-                    <i class="far fa-heart"></i>
-                </div>
-                <button>
-                    Reply
-                </button>
-            </div>
-        </div>
-    `;
-    commentsContainer.appendChild(commentCard);
+  displayComments();
+  document.querySelector("form").reset();
 });
+
+function displayComments() {
+  let commentsContainer = document.querySelector(".comments__container");
+  commentsContainer.innerHTML = "";
+
+  for (let i = 0; i < comments.length; i++) {
+    let commentCard = document.createElement("div");
+    commentCard.classList.add("comment__card");
+
+    let pic = document.createElement("div");
+    pic.classList.add("pic");
+    pic.innerText = comments[i].username;
+
+    let commentInfo = document.createElement("div");
+    commentInfo.classList.add("comment__info");
+
+    let username = document.createElement("small");
+    username.classList.add("nickname");
+    username.innerText = comments[i].username;
+
+    let commentText = document.createElement("p");
+    commentText.classList.add("comment");
+    commentText.innerText = comments[i].text;
+
+    let commentBottom = document.createElement("div");
+    commentBottom.classList.add("comment__bottom");
+
+    let heartIcon = document.createElement("div");
+    heartIcon.classList.add("heart__icon--comment");
+    heartIcon.innerHTML = '<i class="far fa-heart"></i>';
+
+    commentInfo.appendChild(username);
+    commentInfo.appendChild(commentText);
+    commentBottom.appendChild(heartIcon);
+    commentInfo.appendChild(commentBottom);
+    commentCard.appendChild(pic);
+    commentCard.appendChild(commentInfo);
+    commentsContainer.appendChild(commentCard);
+  }
+}*/
+
+let comments = [];
+
+document.querySelector("form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  let user = document.querySelector("#user").value;
+  let comment = document.querySelector("#comment").value;
+
+  let newComment = {
+    username: user.charAt(0),
+    text: comment,
+  };
+
+  comments.push(newComment);
+  localStorage.setItem("comments", JSON.stringify(comments));
+
+  displayComments();
+  document.querySelector("form").reset();
+});
+
+function displayComments() {
+  let storedComments = localStorage.getItem("comments");
+  if (storedComments) {
+    comments = JSON.parse(storedComments);
+  }
+
+  let commentsContainer = document.querySelector(".comments__container");
+  commentsContainer.innerHTML = "";
+
+  for (let i = 0; i < comments.length; i++) {
+    let commentCard = document.createElement("div");
+    commentCard.classList.add("comment__card");
+
+    let pic = document.createElement("div");
+    pic.classList.add("pic");
+    pic.innerText = comments[i].username;
+
+    let commentInfo = document.createElement("div");
+    commentInfo.classList.add("comment__info");
+
+    let username = document.createElement("small");
+    username.classList.add("nickname");
+    username.innerText = comments[i].username;
+
+    let commentText = document.createElement("p");
+    commentText.classList.add("comment");
+    commentText.innerText = comments[i].text;
+
+    let commentBottom = document.createElement("div");
+    commentBottom.classList.add("comment__bottom");
+
+    let heartIcon = document.createElement("div");
+    heartIcon.classList.add("heart__icon--comment");
+    heartIcon.innerHTML = '<i class="far fa-heart"></i>';
+
+    commentInfo.appendChild(username);
+    commentInfo.appendChild(commentText);
+    commentBottom.appendChild(heartIcon);
+    commentInfo.appendChild(commentBottom);
+    commentCard.appendChild(pic);
+    commentCard.appendChild(commentInfo);
+    commentsContainer.appendChild(commentCard);
+  }
+}
