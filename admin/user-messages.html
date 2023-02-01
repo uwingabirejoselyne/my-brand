@@ -46,7 +46,7 @@
                 <li><a href="./user-list.html">Users</a></li>
                 <li><a href="./user-posts.html">Posts</a></li>
                 <li class="active">
-                  <a href="./user-messages.html">Messages</a>
+                  <a href="./user-messages.html">Notifications</a>
                 </li>
               </ul>
               <div class="toggle-profile-menu" onclick="toggleProfile(this)">
@@ -61,6 +61,27 @@
                   <div class="post-title">
                     <h1>Messages</h1>
                   </div>
+                </div>
+                <div class="post-data">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Username</th>
+                        <th>message</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                      <td>Joselyne</td>
+                      <td>developer</td>
+                      <td>
+                        <a href="./edit-user.html">Edit</a>
+                        <a href="#">Delete</a>
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -132,6 +153,7 @@
         </div>
       </footer>
     </div>
+    <script src="../js/displayComment.js"></script>
     <script src="../main.js"></script>
     <script>
       var navMenu = document.getElementById("navMenu");
