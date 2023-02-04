@@ -4,7 +4,7 @@ Apiform.addEventListener('submit',(e)=>{
     var name = document.getElementById("name").value;
     var email= document.getElementById("email").value;
     var message= document.getElementById("message").value;
-    fetch("http://localhost:5000/posts",{
+    fetch("http://localhost:3000/posts",{
         method:'POST',
         body:JSON.stringify({
             name:name,
