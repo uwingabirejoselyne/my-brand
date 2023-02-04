@@ -1,19 +1,15 @@
-const express = require("express");
-const mongoose = require("mongoose");
-
-mongoose.set('strictQuery', true);
+const express = require("express")
+const mongoose = require("mongoose")
+const routes = require("./routes")
+//import routes
+mongoose.set('strictQuery', false); // new
 const app = express();
+let dbURI ="mongodb+srv://joselyne:12345@myapi.19iwnvv.mongodb.net/?retryWrites=true&w=majority"
+mongoose.connect(dbURI)
+.then(() => {
+  app.use("/api", routes)
 
-// Connect to MongoDB database
-mongoose
-  .connect("mongodb://localhost:27017/myApi", { useNewUrlParser: true })
-  .then(() => {
-    const app = express();
-
-    app.listen(5000, () => {
-      console.log("Server has started!");
-    });
-  });
-
-
-
+  app.listen(3000, () => {
+    console.log("Server has started!")
+  })
+})

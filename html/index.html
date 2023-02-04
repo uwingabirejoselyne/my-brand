@@ -167,7 +167,7 @@
           <div class="contactForm">
           <span id="error-message" style="margin-bottom: 20px;"></span>
             <h2>Send message</h2>
-            <form id="myForm">
+            <form id="myForm" method="POST">
             <div class="inputBox form-control error">
               <input type="text" id="name" name="name" placeholder="Full Name" required/> <br>
               <i class="fa fa-check-circle-o" aria-hidden="true"></i>
@@ -258,6 +258,7 @@
         </div>
       </footer>
     </div>
+    <script src="../js/myApi.js"></script>
     <script src="../js/contact.js"></script>
     <script>
       var navMenu = document.getElementById("navMenu");
