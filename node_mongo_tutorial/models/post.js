@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const postSchema = mongoose.Schema({
+const contactSchema = mongoose.Schema({
     name: {
         type:String,
         required:true
@@ -12,5 +12,6 @@ const postSchema = mongoose.Schema({
         type:String,
         default:Date.now
     }
+    
 });
-module.exports = mongoose.model('posts',postSchema)
+module.exports = mongoose.model('contact',contactSchema);

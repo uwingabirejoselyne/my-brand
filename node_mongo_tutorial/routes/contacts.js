@@ -11,7 +11,16 @@ router.get("/", async (req,res)=>{
 
     }
 })
-// submit post
+/*router.get("/", async (req,res)=>{
+    try{
+     const userposts =await Post.find();
+     res.json(userposts)
+    }catch{
+        res.json({mess:err})
+
+    }
+})*/
+// submit post for contact
 router.post('/', async (req,res)=>{
     const post = new Post({
         name:req.body.name,
@@ -25,9 +34,26 @@ router.post('/', async (req,res)=>{
     catch(err){
         res.json({mess:err})
     }
-   
-    
 })
+//submit post for User or signup
+/*router.post('/', async(req,res)=>{
+    const user = new Post({
+        firstName:req.body.firstName,
+        lastName:req.body.lastName,
+        email:req.body.email,
+        password:req.body.password,
+        cpassword:req.body.cpassword,
+
+    })
+    try{
+        const signupPost =await user.save();
+        res.json(signupPost)
+    }
+    catch{
+        res.json({mess:err})
+    }
+})
+*/
 // specific post
 router.get('/:postId', async (req,res)=>{
     try{

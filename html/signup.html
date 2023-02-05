@@ -61,18 +61,21 @@
                         </div>
                         <div class="or">OR</div>
                         <div>
-                            <form action="#" id="signUpForm">
+                            <form action="#" id="signUpForm" method="POST">
                                 <div class="form-contents signup-contents">
                                     <div class="input-box input-box1">
-                                        <i class="fa fa-user fa-fw" aria-hidden="true"></i><input type="text" id="firstName"
+                                        <i class="fa fa-user fa-fw" aria-hidden="true">
+                                        </i><input type="text" id="firstName"
                                             placeholder="FIRST NAME" required>
                                     </div>
                                     <div class="input-box input-box1">
-                                        <i class="fa fa-user fa-fw" aria-hidden="true"></i><input type="text" id="lastName"
+                                        <i class="fa fa-user fa-fw" aria-hidden="true">
+                                        </i><input type="text" id="lastName"
                                             placeholder="LAST NAME" required>
                                     </div>
                                     <div class="input-box input-box1">
-                                        <i class="fa fa-envelope fa-fw" aria-hidden="true"></i><input type="email"
+                                        <i class="fa fa-envelope fa-fw" aria-hidden="true">
+                                        </i><input type="email"
                                             id="email" placeholder="EMAIL" required>
                                     </div>
                                     <div class="input-box input-box1">
@@ -98,6 +101,7 @@
         </div>
         </div>
     </div>
+    <script src="../js/signupApi.js"></script>
     <script src="../js/signup.js"></script>
     <script>
       var navMenu = document.getElementById("navMenu");
